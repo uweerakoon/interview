@@ -7,7 +7,7 @@ public class StringReversal {
   public static void main(String[] args)
   {
     StringReversal sr = new StringReversal();
-    sr.reverseByStringBuilder("udara");
+    System.out.println(sr.reverseByStringBuilder("udara"));
   }
   
   public String reverseByStringBuilder(String input) {
