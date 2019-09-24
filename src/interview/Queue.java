@@ -5,11 +5,9 @@ public class Queue {
   private Node tail;
   
   public Node push(String val) {
-    Node node = new Node();
-    node.value = val;
-    node.next = null;
+    Node node = new Node(val);
     if(tail != null) { // make the link to the next one
-      tail.next = node;
+      tail.setNext(node);
     }
     tail = node;
     if(head == null) {
@@ -24,13 +22,13 @@ public class Queue {
       return null;
     }
     Node node = head;
-    if(head.next == null) {
+    if(head.getNext() == null) {
       head = null;
       tail = null;
     } else {
-      head = head.next;
+      head = head.getNext();
     }
-    node.next = null;
+    node.setNext(null);
     return node;
   }
   
@@ -46,8 +44,8 @@ public class Queue {
     Node temp = head;
     System.out.print("\nThe queue is as follows:     ");
     while(temp != null) {
-      System.out.print("   "+temp.value);
-      temp = temp.next;
+      System.out.print("   "+temp.getData());
+      temp = temp.getNext();
     }
   }
   
@@ -68,9 +66,4 @@ public class Queue {
     q.pop();
   }
 
-}
-
-class Node {
-  Node next;
-  String value;
 }

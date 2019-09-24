@@ -6,11 +6,11 @@ public class Weave {
     Queue total = new Queue();
     while(q1.peek() != null || q2.peek() != null) {
       if(q1.peek() != null) {
-        total.push(q1.pop().value);
+        total.push(q1.pop().getData().toString());
       }
       
       if(q2.peek() != null) {
-        total.push(q2.pop().value);
+        total.push(q2.pop().getData().toString());
       }
     }
     return total;

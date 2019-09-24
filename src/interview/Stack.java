@@ -3,10 +3,9 @@ package interview;
 public class Stack {
   private Node pointer;
   public Node push(String value) {
-    Node node = new Node();
-    node.value = value;
+    Node node = new Node(value);
     if(pointer != null) {
-      node.next = pointer;
+      node.setNext(pointer);
     } 
     pointer = node;
     return node;
@@ -18,8 +17,8 @@ public class Stack {
       return null;
     }
     Node temp = pointer;
-    pointer = pointer.next;
-    temp.next = null;
+    pointer = pointer.getNext();
+    temp.setNext(null);
     return temp;
   }
   
@@ -35,8 +34,8 @@ public class Stack {
     Node temp = pointer;
     System.out.print("\nThe Stack is as follows:     ");
     while(temp != null) {
-      System.out.print("   "+temp.value);
-      temp = temp.next;
+      System.out.print("   "+temp.getData());
+      temp = temp.getNext();
     }
   }
   
