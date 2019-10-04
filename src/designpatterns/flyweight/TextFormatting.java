@@ -3,6 +3,15 @@ package designpatterns.flyweight;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 1. Store common data externally
+ * 2. Specify an index or a reference into the external data store
+ * 3. define the idea of ranges on homogeneous collections and store
+ * data related to those ranges
+ * 4. don't forget String.intern
+ * @author udaraweerakoon
+ *
+ */
 public class TextFormatting {
   public static void main(String[] args) {
     FormattedText ft = new FormattedText("This is a brave new world");
