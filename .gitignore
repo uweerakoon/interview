@@ -1,5 +1,13 @@
-/bin/
+ /.idea/*
+ *.iml
 .DS_Store
 .classpath
 .gitignore.swp
 .project
+/bin/*
+/.idea/.gitignore
+/interview.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/uiDesigner.xml
+/.idea/vcs.xml
