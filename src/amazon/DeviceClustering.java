@@ -51,7 +51,7 @@ public class DeviceClustering {
     //System.out.println(returnList);
 
     // sort forward list
-    Collections.sort(forwardList, new Comparator<List<Integer>>() {
+    forwardList.sort(new Comparator<List<Integer>>() {
       @Override
       public int compare(List<Integer> o1, List<Integer> o2) {
         return o1.get(1) - o2.get(1);
@@ -59,7 +59,7 @@ public class DeviceClustering {
     });
 
     // sort return list
-    Collections.sort(returnList, new Comparator<List<Integer>>() {
+    returnList.sort(new Comparator<List<Integer>>() {
       public int compare(List<Integer> o1, List<Integer> o2) {
         return o1.get(1) - o2.get(1);
       }

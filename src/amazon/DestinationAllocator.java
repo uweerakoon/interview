@@ -24,13 +24,13 @@ public class DestinationAllocator {
     for(List<Integer> location : allLocations) {
       allDestinations.add(new Destination(location.get(0), location.get(1)));
     }
-    Collections.sort(allDestinations, new Comparator<Destination>() {
+    allDestinations.sort(new Comparator<Destination>() {
       @Override
       public int compare(final Destination dest1, final Destination dest2) {
-        
+
         double distance1 = dest1.distance(TRUCK_ORIGIN);
         double distance2 = dest2.distance(TRUCK_ORIGIN);
-        return Double.compare(distance1,distance2);
+        return Double.compare(distance1, distance2);
       }
     });
     for(int i = 0; i< numDeliveries; i++) {
